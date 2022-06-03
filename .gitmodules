@@ -1,0 +1,3 @@
+[submodule "postgres-search-db"]
+	path = postgres-search-db
+	url = git@github.com:cassis163/postgres-test-db.git
