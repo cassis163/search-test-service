@@ -1,5 +1,6 @@
 ### Secret ###
 .env
+**/gcp-credentials.json
 
 ### Maven ###
 HELP.md
