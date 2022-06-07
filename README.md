@@ -1,4 +1,4 @@
-# ec-search-service
+# search-test-service
 Used for testing the applicability of event sourcing!
 ## Behaviour
 Receives Pub/Sub messages from the product-test-service and stock-test-service and processes them into events.
