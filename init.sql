@@ -13,7 +13,8 @@ CREATE TABLE product_option(
     product_id INT NOT NULL,
     CONSTRAINT fk_product FOREIGN KEY(product_id) REFERENCES product(id),
     color_id INT NOT NULL,
-    CONSTRAINT fk_color FOREIGN KEY(color_id) REFERENCES color(id)
+    CONSTRAINT fk_color FOREIGN KEY(color_id) REFERENCES color(id),
+    name TEXT NULL
 );
 
 CREATE TABLE stock_mutation(
@@ -23,9 +24,15 @@ CREATE TABLE stock_mutation(
     amount INT NOT NULL
 );
 
-INSERT INTO color VALUES
+INSERT INTO
+    color
+VALUES
     (1, 'Red'),
     (2, 'Blue'),
     (3, 'Yellow'),
     (4, 'Green'),
-    (5, 'White')
+    (5, 'White');
+
+CREATE SUBSCRIPTION product_subscription CONNECTION 'postgresql://postgres:SotDqDXtcj95Gm@product-db:5432/product' PUBLICATION product_publication;
+
+CREATE SUBSCRIPTION product_option_subscription CONNECTION 'postgresql://postgres:SotDqDXtcj95Gm@product-db:5432/product' PUBLICATION product_option_publication;
