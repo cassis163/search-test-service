@@ -32,7 +32,3 @@ VALUES
     (3, 'Yellow'),
     (4, 'Green'),
     (5, 'White');
-
-CREATE SUBSCRIPTION product_subscription CONNECTION 'postgresql://postgres:SotDqDXtcj95Gm@product-db:5432/product' PUBLICATION product_publication;
-
-CREATE SUBSCRIPTION product_option_subscription CONNECTION 'postgresql://postgres:SotDqDXtcj95Gm@product-db:5432/product' PUBLICATION product_option_publication;
